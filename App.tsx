@@ -43,25 +43,11 @@ function App(): React.JSX.Element {
 	</>);
 }
 
-/**
- * Couldn't figure out a way do to this without making this interface
- * --TODO: look up other ways
- */
-interface AppContentProps {
-	insets?: EdgeInsets;
-}
 
-function AppContent({ insets }: AppContentProps): React.JSX.Element {
+
+function AppContent(): React.JSX.Element {
 	return (
-		<View style={[
-			styles.container,
-			/*{
-				paddingTop: insets.top,
-				paddingRight: insets.right,
-				paddingBottom: insets.bottom,
-				paddingLeft: insets.left
-			}*/
-		]}
+		<View style={styles.container}
 		>
 			<View style={styles.header}>
 				<Text>Welcome to CPAN213!!!</Text>
