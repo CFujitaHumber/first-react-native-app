@@ -37,10 +37,10 @@
   },
   "homepage": "https://github.com/CFujitaHumber/first-react-native-app#readme",
   "dependencies": {
-    "@react-native/new-app-screen": "0.81.4",
     "react": "^19.1.0",
     "react-native": "^0.81.4",
-    "react-native-config": "^1.5.5"
+    "react-native-config": "^1.5.5",
+    "react-native-safe-area-context": "^5.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

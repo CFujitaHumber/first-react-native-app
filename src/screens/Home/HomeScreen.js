@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
 import Header from '../../components/common/Header';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header title="Home Screen" />
       <ScrollView style={styles.content}>
         <Text style={styles.welcomeText}>Welcome to CPAN 213!</Text>
@@ -11,7 +13,7 @@ const HomeScreen = () => {
           This is your properly structured React Native application.
         </Text>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

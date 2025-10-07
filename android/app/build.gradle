@@ -1,6 +1,12 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+
+project.ext.envConfigFiles = [
+    debug: ".env.development",
+    release: project.hasProperty('ENVFILE') ? project.property('ENVFILE') : ".env.production",
+    staging: ".env.staging"
+]
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 /**
@@ -118,5 +124,6 @@ dependencies {
         implementation jscFlavor
     }
     implementation project(':react-native-config')
+    implementation project(':react-native-safe-area-context')
 }
 
